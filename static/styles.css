@@ -24,7 +24,18 @@ body {
     background-image: url('/static/psesyn/images/banner_back.png');
     background-repeat: no-repeat; 
 }
+@media (min-width: 600px) {
+    .banner-back-index {
+        /* Adjusted styles for larger screens */
+    }
+}
 
+/* Styles for screens smaller than 600px */
+@media (max-width: 599px) {
+    .banner-back-index {
+        /* Adjusted styles for smaller screens */
+    }
+}
 nav {
 
     background-size: cover; /* This will ensure the image covers the entire nav area */

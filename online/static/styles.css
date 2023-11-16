@@ -1,11 +1,11 @@
 body {
     font-family: Arial, sans-serif;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 1000px;
 }
 
 .f-body {
-    width: 95%;
+    width: 1697px;
     margin-left: auto;
     margin-right: auto;
 
@@ -13,20 +13,16 @@ body {
 
 .banner-back-index {
     position: relative;
-    height: 100vh;
-    /* background-image: url('/static/psesyn/images/banner1.png'); */
-    /* background-image: url('/online/static/psesyn/images/banner1.png'); */
-    background-size: cover;
+    height: 890px;
+    background-image: url('/static/psesyn/images/banner1.png');
     background-repeat: no-repeat; 
 }
 
 .banner-back {
     position: relative;
-    height: 55vh;
-    /* background-image: url('/static/psesyn/images/banner_back.png'); */
-    /* background-image: url('/online/static/psesyn/images/banner_back.png'); */
+    height: 485px;
+    background-image: url('/static/psesyn/images/banner_back.png');
     background-repeat: no-repeat; 
-    background-size: cover;
 }
 
 nav {
@@ -41,7 +37,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    min-width: 100hv;
+    min-width: 1697px;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.2); /* Optional: a semi-transparent background to make text more readable */
 }
@@ -50,7 +46,6 @@ nav li a {
     display:block;
     color: white;
     text-align: center;
-    align-items: center;
     padding: 14px 16px;
     text-decoration: none;
 }
@@ -68,7 +63,7 @@ nav li a:hover {
 }
 
 .banner {
-    position: relative;
+    position: absolute;
     top: 8%;
     width: 100%;
     min-width: 1697px;;
