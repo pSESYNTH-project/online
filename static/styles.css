@@ -1,11 +1,11 @@
 body {
     font-family: Arial, sans-serif;
     background-repeat: no-repeat;
-    min-width: 100vw;
+    min-height: 100vh;
 }
 
 .f-body {
-    width: 100%;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
 
@@ -13,7 +13,6 @@ body {
 
 .banner-back-index {
     position: relative;
-    width: 100vw;
     /* background-image: url('/static/psesyn/images/banner1.png'); */
     /* background-image: url('/online/static/psesyn/images/banner1.png'); */
     background-size: cover;
