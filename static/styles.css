@@ -14,6 +14,7 @@ body {
 .banner-back-index {
     position: relative;
     height: 100vh;
+    width: 100vw;
     /* background-image: url('/static/psesyn/images/banner1.png'); */
     /* background-image: url('/online/static/psesyn/images/banner1.png'); */
     background-size: cover;
