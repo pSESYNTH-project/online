@@ -1,14 +1,16 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: white;
     background-repeat: no-repeat;
     min-height: 100vh;
+    /* min-width: 100vw; */
 }
 
 .f-body {
-    width: 95%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-
+    /* font-size: 1.75vh; */
 }
 
 .banner-back-index {
@@ -41,9 +43,31 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    min-width: 100hv;
+    min-width: 100%;
     justify-content: space-around;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.2); /* Optional: a semi-transparent background to make text more readable */
+}
+
+.dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+    top: 100%;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown .dropdown-content:hover,
+.dropdown:focus .dropdown-content,
+.dropdown .dropdown-content:focus {
+    display: block;
+    z-index: 10;
+
 }
 
 nav li a {
@@ -60,30 +84,27 @@ nav li a:hover {
 }
 
 .banner-index {
-    position: absolute;
-    top: 8%;
-    min-width: 1697px;
+    position: relative;
+    min-width: 100%;
     width: 100%;
-    height: 800px;
+    height: 100%;
+    font-size: 2vh;
 }
 
 .banner {
     position: relative;
-    top: 8%;
-    width: 100%;
-    min-width: 1697px;;
-    height: 400px;
+    height: 90%;
+    font-size: 2vh;
 
 }
 
 .banner-upper {
     position:absolute;
-    top: 0%;
+    top: 8%;
     left: 3%;
     font-size: 3em;
     font-weight: 100;
     font-family: Helvetica;
-
     color: black;
 } 
 
@@ -97,8 +118,10 @@ nav li a:hover {
     transform: translate(-50%, -50%);
     font-weight:1000;
     color: orange ;
-    animation: pulsing-glow 3s infinite
+    animation: pulsing-glow 3s infinite;
 }
+
+
 
 .banner-text {
     font-size: 6em;
@@ -118,14 +141,15 @@ nav li a:hover {
     border-radius: 15px;
     position:absolute;
     text-align: center;
-    top: 45%;
-    left: 28%;
+    top: 50%;
+    left: 50%;
     font-size: 2.1em;
     font-weight: 100;
     font-family: Helvetica;
     font-style: italic;
     color: black;
     text-shadow: 0 0 10px white;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -142,6 +166,26 @@ nav li a:hover {
     }
 }
 
+.logos {
+
+    display: flex;
+    flex-wrap: wrap;
+    height: 4vh;
+    padding: 1%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(202, 131, 0, 0.2);
+    box-shadow: 1px 1px 50px 20px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px -10px 20px -15px rgba(0, 0, 0, 0.2); */
+
+}
+.logos img {
+
+    box-sizing: content-box;
+    height: 100%;
+    width: auto;
+
+}
 
 /* Content Block Styles */
 
@@ -152,7 +196,7 @@ nav li a:hover {
     border-radius: 12px;
     margin: 20px auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 95%;
+    max-width: 100%;
     line-height: 1.6;
 }
 
@@ -163,25 +207,48 @@ nav li a:hover {
 
 }
 
-.content-container h1 {
+.content-container h1, button{
     text-align: center;
     color: black;
-    font-size: 2em;  /* Adjust the font-size as needed */
+    font-size: 2rem;  /* Adjust the font-size as needed */
     margin-bottom: 20px;  /* Space between the title and the content */
     /* border-bottom: 2px solid black;  */
 }
 
-.content-container p {
+.content-container p{
     text-align: justify;
-    font-size: 1.3em;  /* Adjust the font-size as needed */
+    font-size: 1.3rem;  /* Adjust the font-size as needed */
     margin-bottom: 20px;  /* Space between paragraphs */
 
 }
 
+.content-container ul li {
+    text-align: justify;
+    font-size: 1.3em;  /* Adjust the font-size as needed */
+    margin-bottom: 20px;  /* Space between paragraphs */
+    width: 80%;
+
+}
+
+
+.global {
+
+    display: flex; 
+    align-items: center; 
+    align-content: center; 
+    flex-wrap: nowrap;
+
+}
+
+.global img {
+
+    width: 50%;
+
+}
 
 /* Heading Styles */
 .content h1, .instance h1 {
-    font-size: 2em;
+    font-size: 2rem;
     color: #333;
     margin-bottom: 20px;  /* Increased margin for better spacing */
     border-bottom: 2px solid #ddd;  /* Underline for separation */
@@ -190,7 +257,7 @@ nav li a:hover {
 
 /* Paragraph Styles */
 .content p, .instance p {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     color: #666;
     margin-bottom: 20px;  /* Increased margin for better spacing */
     text-align: justify;  /* Justified text for a clean look */
@@ -220,9 +287,9 @@ nav li a:hover {
 .join-us {
     display: block;
     font-size: 1.8em;
-    width: 130px;
+    width: auto;
     height: 50px;
-    margin: 20px auto;
+    margin: 6% auto;
     padding: 10px 15px;
     background-color: orange;
     color: rgb(248, 244, 244);
@@ -231,15 +298,25 @@ nav li a:hover {
     border:none;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 1)
+
     
 }
-
 
 
 .join-us:hover {
     background-color: rgb(212, 133, 29);
 }
 
+.join-us a {
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.news-content {
+    min-width: 50%;
+}
 
 /* Profile of PIs*/
 .profile-container {
@@ -278,16 +355,21 @@ nav li a:hover {
 }
 
 .profile-description {
+    flex-grow: 1;
     line-height: 1.5;
-    height: 125px;
+    /* height: 125px; */
     overflow-y: auto;
     margin-bottom: 0 !important;
 }
 
+.profile-tag {
+    font-weight: 600;
+}
+
 
 .news-photo {
-    width: 500px;
-    height: 200px;
+    width: 20%;
+    /* height: 200px; */
     object-fit: cover;
     margin-right: 20px;
     border-radius: 8px; /* Optional: if you want rounded corners for the image */
@@ -309,13 +391,120 @@ nav li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* 100% of the viewport height */
-    height: 1078px;
+    height: 100%; /* 100% of the viewport height */
+    width: auto;
 }
   
 .workflow-image img {
-max-width: 100%; /* Ensure the image doesn't exceed its original size */
-max-height: 100%; /* Ensure the image doesn't exceed its original size */
-width: auto; /* Responsive width */
-height: 100%; /* Responsive height */
+max-width: 70%; /* Ensure the image doesn't exceed its original size */
+width: 70%; /* Responsive width */
+height: auto; /* Responsive height */
+margin-top: 5%;
+}
+
+.section-content {
+    display: flex;                /* Make each instance take equal space */
+    box-sizing: border-box; 
+    padding: 40px 20px;
+    background-color: rgba(255, 165, 0, 0.1);  /* Light orange background with some transparency */
+    border: 2px solid rgba(135, 206, 250, 0.5);  /* Light blue border */
+    border-radius: 12px;
+    margin: 1% auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 55%;
+    line-height: 1.6;  
+}
+
+.submenu {
+    width: 80%;  /* You can adjust the width as needed */
+    margin: 0 auto;  /* Centers the container horizontally */
+    padding: 3px ;
+}
+
+.submenu .selectors {
+    display: flex;
+    justify-content: center;
+
+}
+
+.selectors button {
+    text-align: center;
+    color: black;
+    font-size: 2em;  /* Adjust the font-size as needed */
+    margin-top: 2%;  /* Space between the title and the content */
+    margin-left: 2%;
+    width: 30%;
+    background-color: rgba(255, 165, 0, 0.1);
+    /* background-color: transparent; */
+    border: 2px solid rgba(135, 206, 250, 0.5); 
+    border-radius: 12px;
+}
+
+.selectors button:hover {
+    transform: scale(1.1); 
+}
+
+.section-content h1 {
+    font-weight: 1000;
+    font-size: 1em;
+    border-bottom: 2px solid #ddd;
+}
+
+@media (max-width: 600px) {
+    .banner-text-index, .banner-text {
+        font-size: 3.8em;
+        top: 20%;
+    }
+    .banner-lower {
+        top: 32%;
+        font-size:1.3em;
+        width: 94%;
+    }
+    .banner-upper {
+        top: 3%;
+        font-size:1.3em;
+    }
+    li a {
+        padding: 14px 3px !important;
+        font-size: 0.85em;
+    }
+    .workflow-image {
+        height: 100%;
+    }
+    .instance-content {
+        width: 100%;
+    }
+    .instance p {
+        font-size: 1em;
+        width: 100%;
+    }
+    .profile-header {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    .news-photo {
+        width: 100%;
+    }
+    .selectors button {
+        z-index: 10;
+        margin-left: 4%;
+        width: 50%;
+    }
+    .section-content {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .global {
+
+        flex-wrap: wrap;
+    }
+
+    .global img {
+
+        width: 100% !important;
+    
+    }
+    
+
 }
